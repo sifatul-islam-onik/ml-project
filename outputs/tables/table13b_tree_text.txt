@@ -1,0 +1,46 @@
+|--- CGPA_ord <= 3.50
+|   |--- Financial <= 3.50
+|   |   |--- FutureMacro <= 3.75
+|   |   |   |--- Workload <= 4.38
+|   |   |   |   |--- class: 2
+|   |   |   |--- Workload >  4.38
+|   |   |   |   |--- class: 2
+|   |   |--- FutureMacro >  3.75
+|   |   |   |--- Workload <= 3.62
+|   |   |   |   |--- class: 2
+|   |   |   |--- Workload >  3.62
+|   |   |   |   |--- class: 0
+|   |--- Financial >  3.50
+|   |   |--- SupportGap <= 2.25
+|   |   |   |--- FutureMacro <= 4.25
+|   |   |   |   |--- class: 0
+|   |   |   |--- FutureMacro >  4.25
+|   |   |   |   |--- class: 1
+|   |   |--- SupportGap >  2.25
+|   |   |   |--- Workload <= 3.38
+|   |   |   |   |--- class: 0
+|   |   |   |--- Workload >  3.38
+|   |   |   |   |--- class: 0
+|--- CGPA_ord >  3.50
+|   |--- FutureMacro <= 3.75
+|   |   |--- Workload <= 3.62
+|   |   |   |--- FutureMacro <= 3.25
+|   |   |   |   |--- class: 2
+|   |   |   |--- FutureMacro >  3.25
+|   |   |   |   |--- class: 2
+|   |   |--- Workload >  3.62
+|   |   |   |--- Financial <= 2.50
+|   |   |   |   |--- class: 2
+|   |   |   |--- Financial >  2.50
+|   |   |   |   |--- class: 1
+|   |--- FutureMacro >  3.75
+|   |   |--- SupportGap <= 3.75
+|   |   |   |--- Workload <= 3.38
+|   |   |   |   |--- class: 1
+|   |   |   |--- Workload >  3.38
+|   |   |   |   |--- class: 1
+|   |   |--- SupportGap >  3.75
+|   |   |   |--- Financial <= 3.50
+|   |   |   |   |--- class: 1
+|   |   |   |--- Financial >  3.50
+|   |   |   |   |--- class: 0

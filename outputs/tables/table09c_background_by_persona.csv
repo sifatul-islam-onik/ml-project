@@ -1,0 +1,5 @@
+﻿persona,n,pct_of_sample,mean_cgpa_band,mean_year,pct_backlog,pct_female,pct_hall,pct_mess,pct_family,pct_other,top_department
+Low-CGPA & Financially strained & Unsupported,361,36.6,2.86,2.44,12.2,15.5,40.2,44.6,6.4,8.9,CSE
+High-achieving & Future-anxious & Well-supported,376,38.1,4.3,2.06,1.3,26.1,28.7,50.3,13.8,7.2,CSE
+Future-confident & Light workload & Financially secure,250,25.3,3.56,2.24,5.6,22.0,29.6,44.4,12.0,14.0,CSE
+SAMPLE (base rate),987,100.0,3.58,2.24,6.4,21.2,33.1,46.7,10.6,9.5,CSE

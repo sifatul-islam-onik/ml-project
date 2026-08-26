@@ -1,0 +1,14 @@
+﻿theme,overall_pct,Low-CGPA & Financially strained & Unsupported,High-achieving & Future-anxious & Well-supported,Future-confident & Light workload & Financially secure,chi2,p,cramers_v,sig_bonferroni,highest_persona
+Lab & coursework load,28.5,24.9,32.5,27.9,4.57,0.10199020075491233,0.055,False,High-achieving & Future-anxious & Well-supported
+Exams & results,24.3,25.5,24.4,22.3,0.73,0.6951733269414837,0.0,False,Low-CGPA & Financially strained & Unsupported
+Generic academic pressure,14.3,15.0,14.1,13.5,0.24,0.8864052298278282,0.0,False,Low-CGPA & Financially strained & Unsupported
+Career & job uncertainty,13.8,14.3,16.2,9.3,5.35,0.06885611325981265,0.063,False,High-achieving & Future-anxious & Well-supported
+Time & schedule pressure,11.8,14.3,9.4,11.6,3.79,0.150390571142294,0.046,False,Low-CGPA & Financially strained & Unsupported
+Teachers & teaching quality,9.6,9.7,7.5,12.6,3.8,0.14941396750510397,0.046,False,Future-confident & Light workload & Financially secure
+Family & homesickness,8.8,11.2,7.5,7.0,3.91,0.1415049219549312,0.047,False,Low-CGPA & Financially strained & Unsupported
+"Peers, comparison & campus climate",8.2,8.1,9.1,7.0,0.75,0.6875628320479001,0.0,False,High-achieving & Future-anxious & Well-supported
+Financial stress,7.2,10.0,6.6,4.2,6.76,0.03402629246273803,0.075,False,Low-CGPA & Financially strained & Unsupported
+Living conditions & food,4.6,6.9,3.8,2.3,6.83,0.03280249033588291,0.075,False,Low-CGPA & Financially strained & Unsupported
+Curriculum & non-departmental courses,3.3,3.7,4.1,1.4,3.25,0.19733310336260684,0.038,False,High-achieving & Future-anxious & Well-supported
+Sleep & health,3.2,3.7,4.1,0.9,4.7,0.09518102626361931,0.056,False,High-achieving & Future-anxious & Well-supported
+Self-regulation & procrastination,2.7,3.7,2.2,1.9,2.22,0.32890243570790517,0.016,False,Low-CGPA & Financially strained & Unsupported

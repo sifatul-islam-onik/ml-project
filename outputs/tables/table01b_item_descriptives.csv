@@ -1,0 +1,13 @@
+﻿item,raw_mean,raw_sd,raw_skew,pct_agree,pct_disagree,pct_top_box,ceiling_flag
+MissMeal,4.154,1.207,-1.305,77.8,14.6,57.1,True
+PileUp,3.783,1.18,-0.715,64.1,15.7,35.1,False
+SleepLoss,4.284,0.976,-1.483,83.2,6.8,54.3,True
+LabStress,4.118,1.151,-1.18,76.0,12.9,52.4,True
+ExamWorry,3.99,1.181,-1.092,72.5,12.3,44.8,False
+ResultDemotiv,3.867,1.178,-0.778,66.2,14.8,39.8,False
+CGPACompare,3.24,1.459,-0.29,48.1,30.9,26.6,False
+AskTeacher,2.448,1.161,0.376,17.2,51.5,5.6,False
+Feedback,3.161,1.221,-0.286,40.1,24.7,14.8,False
+Financial,3.31,1.406,-0.285,49.1,30.9,27.6,False
+JobWorry,4.349,0.982,-1.701,83.7,5.4,59.8,True
+SocioPol,3.757,1.196,-0.749,63.7,15.4,33.8,False

@@ -1,0 +1,8 @@
+﻿test,value,note
+(a) centroid reproduction: max |train - holdout| z-drift,0.26,tolerance 0.50 z
+(a) centroid reproduction: mean |z-drift|,0.116,lower is better
+(b) proportion match: max |train%% - holdout%%|,3.44,percentage points
+(b) proportion match: chi-square (df = 2),1.51,p = 0.470
+"(c) silhouette, train",0.139,reference
+"(c) silhouette, holdout (frozen model)",0.121,drop = 0.0180
+(d) ARI: frozen-predict vs fresh-fit on holdout,0.377,the strict test

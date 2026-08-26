@@ -1,0 +1,15 @@
+{
+  "id": "REPLACE_WITH_YOUR_KAGGLE_USERNAME/kuet-student-stress-clustering",
+  "title": "KUET Student Stress Clustering",
+  "code_file": "stress_clustering_kaggle.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "REPLACE_WITH_YOUR_KAGGLE_USERNAME/kuet-academic-stress-survey"
+  ],
+  "competition_sources": [],
+  "kernel_sources": []
+}

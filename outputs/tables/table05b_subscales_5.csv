@@ -1,0 +1,6 @@
+﻿subscale,gloss,n_items,items,alpha,spearman_brown,mean,sd
+Evaluation,Evaluation & performance anxiety,3,"ExamWorry, ResultDemotiv, CGPACompare",0.596,,3.699,0.952
+Workload,Workload & self-care sacrifice,4,"MissMeal, PileUp, SleepLoss, LabStress",0.549,,4.085,0.738
+FutureMacro,Future & macro insecurity,2,"JobWorry, SocioPol",0.26,0.265,4.053,0.829
+SupportGap,Teacher-support gap,2,"AskTeacher, Feedback",0.626,0.627,3.196,1.016
+Financial,Financial pressure,1,Financial,,,3.31,1.406

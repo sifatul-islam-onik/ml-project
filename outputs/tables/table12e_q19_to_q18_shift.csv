@@ -1,0 +1,14 @@
+﻿theme,previous_years_pct,current_pct,change_pp,gained_n,dropped_n,mcnemar_p,sig_bonferroni
+Sleep & health,3.6,3.4,-0.1,18,19,1.0,False
+Self-regulation & procrastination,1.9,2.5,0.6,15,11,0.557197093963623,False
+Family & homesickness,7.7,8.6,0.9,45,39,0.5856467947212257,False
+Curriculum & non-departmental courses,2.7,3.7,1.0,19,12,0.28104151505976915,False
+"Peers, comparison & campus climate",6.6,8.3,1.8,39,27,0.17528579444303533,False
+Financial stress,5.7,7.5,1.8,34,22,0.1408954235984807,False
+Living conditions & food,3.4,5.4,1.9,31,18,0.08543313315739454,False
+Exams & results,21.6,24.3,2.7,92,74,0.18685382164683675,False
+Generic academic pressure,11.5,14.5,3.0,60,40,0.056887933640980784,False
+Teachers & teaching quality,7.6,10.6,3.0,58,38,0.05191052214883844,False
+Time & schedule pressure,8.2,11.6,3.4,61,38,0.026525106848394424,False
+Career & job uncertainty,9.2,14.5,5.2,77,42,0.0017105290774106741,True
+Lab & coursework load,23.2,29.1,5.8,120,81,0.007203828622098756,False

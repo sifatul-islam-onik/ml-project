@@ -1,0 +1,17 @@
+﻿persona,n_at_leaf,purity_pct,rule
+Future-confident & Light workload & Financially secure,65,93.8,CGPA_ord <= 3.50 AND Financial <= 3.50 AND FutureMacro <= 3.75 AND Workload <= 4.38
+Future-confident & Light workload & Financially secure,37,78.4,CGPA_ord > 3.50 AND FutureMacro <= 3.75 AND Workload > 3.62 AND Financial <= 2.50
+Future-confident & Light workload & Financially secure,33,100.0,CGPA_ord > 3.50 AND FutureMacro <= 3.75 AND Workload <= 3.62 AND FutureMacro <= 3.25
+Future-confident & Light workload & Financially secure,31,48.4,CGPA_ord <= 3.50 AND Financial <= 3.50 AND FutureMacro <= 3.75 AND Workload > 4.38
+Future-confident & Light workload & Financially secure,25,72.0,CGPA_ord <= 3.50 AND Financial <= 3.50 AND FutureMacro > 3.75 AND Workload <= 3.62
+Future-confident & Light workload & Financially secure,20,95.0,CGPA_ord > 3.50 AND FutureMacro <= 3.75 AND Workload <= 3.62 AND FutureMacro > 3.25
+High-achieving & Future-anxious & Well-supported,232,92.2,CGPA_ord > 3.50 AND FutureMacro > 3.75 AND SupportGap <= 3.75 AND Workload > 3.38
+High-achieving & Future-anxious & Well-supported,68,44.1,CGPA_ord > 3.50 AND FutureMacro <= 3.75 AND Workload > 3.62 AND Financial > 2.50
+High-achieving & Future-anxious & Well-supported,53,62.3,CGPA_ord > 3.50 AND FutureMacro > 3.75 AND SupportGap <= 3.75 AND Workload <= 3.38
+High-achieving & Future-anxious & Well-supported,44,72.7,CGPA_ord > 3.50 AND FutureMacro > 3.75 AND SupportGap > 3.75 AND Financial <= 3.50
+High-achieving & Future-anxious & Well-supported,20,50.0,CGPA_ord <= 3.50 AND Financial > 3.50 AND SupportGap <= 2.25 AND FutureMacro > 4.25
+Low-CGPA & Financially strained & Unsupported,191,97.4,CGPA_ord <= 3.50 AND Financial > 3.50 AND SupportGap > 2.25 AND Workload > 3.38
+Low-CGPA & Financially strained & Unsupported,76,57.9,CGPA_ord <= 3.50 AND Financial <= 3.50 AND FutureMacro > 3.75 AND Workload > 3.62
+Low-CGPA & Financially strained & Unsupported,50,66.0,CGPA_ord > 3.50 AND FutureMacro > 3.75 AND SupportGap > 3.75 AND Financial > 3.50
+Low-CGPA & Financially strained & Unsupported,22,68.2,CGPA_ord <= 3.50 AND Financial > 3.50 AND SupportGap > 2.25 AND Workload <= 3.38
+Low-CGPA & Financially strained & Unsupported,20,75.0,CGPA_ord <= 3.50 AND Financial > 3.50 AND SupportGap <= 2.25 AND FutureMacro <= 4.25

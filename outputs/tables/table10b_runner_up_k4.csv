@@ -1,0 +1,5 @@
+﻿cluster,persona,n,pct,defining_dimensions
+C0,Unsupported & Overloaded & Financially strained,307,31.1,SupportGap +0.82; Workload +0.53; Financial +0.47
+C1,Low-CGPA & Financially strained & Exam-anxious,216,21.9,CGPA_ord -1.14; Financial +0.56; Evaluation +0.45
+C2,Well-supported & High-achieving & Future-anxious,280,28.4,SupportGap -0.75; CGPA_ord +0.65; FutureMacro +0.39
+C3,Future-confident & Financially secure & Light workload,184,18.6,FutureMacro -1.30; Financial -0.87; Workload -0.77

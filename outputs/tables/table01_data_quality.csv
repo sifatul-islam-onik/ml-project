@@ -1,0 +1,18 @@
+﻿check,value,note
+Responses in export,987.0,n
+Columns in export,21.0,expected 21
+"Missing values, closed-ended items",0.0,must be 0
+"Missing values, 12 Likert items",0.0,must be 0
+Blank Q18 (current stressor),131.0,optional field
+Blank Q19 (previous years),279.0,optional field
+Exact duplicate rows,0.0,must be 0
+Duplicates ignoring timestamp,0.0,identical answer patterns
+Likert values outside 1-5,0.0,must be 0
+Non-integer Likert values,0.0,must be 0
+Straight-lined responses (all 12 identical),2.0,0.20% of n
+Rows with within-row SD < 0.35,2.0,low-variance responders
+Rows with a run of >= 8 identical answers,7.0,0.71% of n
+Mean within-row SD,1.241,spread across the 12 items
+Top-box (5) rate across all answers,37.6,"%, acquiescence check"
+Respondents using all five scale points,28.4,% of n
+Collection window,12.0,days

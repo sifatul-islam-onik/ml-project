@@ -1,0 +1,791 @@
+{
+  "schema": {
+    "n_columns": 21,
+    "columns": [
+      "Timestamp",
+      "Current Year",
+      "Current CGPA",
+      "Gender",
+      "Living Arrangement",
+      "I often miss my breakfast/meal due to my classes.\nক্লাসের চাপে আমি প্রায়ই সকালের নাস্তা বা খাবার বাদ দিই।",
+      "Assignments and lab reports pile up faster than I can finish them.\nঅ্যাসাইনমেন্ট ও ল্যাব রিপোর্ট এত দ্রুত জমে যায় যে সময়মতো শেষ করতে পারি না।",
+      "I often sacrifice sleep to keep up with coursework.\nপড়াশোনার চাপ সামলাতে আমাকে প্রায়ই ঘুম কমাতে বা ত্যাগ করতে হয়।",
+      "I feel more stressed for lab works than theory courses.\nথিওরি কোর্সের তুলনায় ল্যাবের কাজ আমাকে বেশি মানসিক চাপে ফেলে।",
+      "I worry about doing poor result in exams even when I have prepared well.\nভালোভাবে প্রস্তুতি নেওয়ার পরও পরীক্ষায় খারাপ ফলাফল করার চিন্তা আমাকে দুশ্চিন্তায় রাখে।",
+      "One poor result hurts my motivation for the rest of the semester.\nএকটি খারাপ ফলাফল পুরো সেমিস্টারের জন্য আমার উৎসাহ কমিয়ে দেয়।",
+      "I have one or more backlog/incomplete courses.\nআমার এক বা একাধিক ব্যাকলগ/অসম্পূর্ণ কোর্স রয়েছে।",
+      "I constantly compare my CGPA with my classmates.\nআমি প্রায়ই আমার CGPA সহপাঠীদের CGPA-এর সঙ্গে তুলনা করি।",
+      "I feel comfortable asking teachers for academic help.\nপড়াশোনার বিষয়ে শিক্ষকদের কাছে সাহায্য চাইতে আমি স্বাচ্ছন্দ্যবোধ করি।",
+      "Feedback from instructors actually reduces my stress.\nশিক্ষকদের মতামত ও পরামর্শ আমার মানসিক চাপ কমাতে সাহায্য করে।",
+      "Financial concerns interfere with my academic performance.\nআর্থিক দুশ্চিন্তা আমার পড়াশোনার ওপর নেতিবাচক প্রভাব ফেলে।",
+      "I worry about landing a job immediately after graduation.\nগ্র্যাজুয়েশনের​ পর দ্রুত চাকরি পাওয়া নিয়ে আমি উদ্বিগ্ন থাকি।",
+      "Socio-economic and political instability, whether in Bangladesh or abroad, concerns me. \nদেশে বা বিদেশে সংঘটিত সামাজিক, অর্থনৈতিক ও রাজনৈতিক অস্থিরতা আমাকে উদ্বিগ্ন করে। ",
+      "In one or two sentences, what is your single biggest source of stress in university?\nবিশ্ববিদ্যালয়ে আপনার সবচেয়ে বড় মানসিক চাপের কারণ কী?  ",
+      "What was the main source of your stress during your previous academic years (1st/2nd/3rd) if any?\nআপনার আগের শিক্ষাবর্ষগুলোতে (১ম/২য়/৩য় বর্ষে) মানসিক চাপের প্রধান কারণ কী ছিল?  ",
+      "Department"
+    ]
+  },
+  "data_path": "Academic Stress among Bangladeshi Engineering Students (Responses).xlsx",
+  "audit": {
+    "n_rows": 987,
+    "n_columns": 21,
+    "closed_ended_missing": 0,
+    "likert_missing": 0,
+    "open_current_missing": 131,
+    "open_previous_missing": 279,
+    "exact_duplicate_rows": 0,
+    "duplicate_ignoring_timestamp": 0,
+    "likert_out_of_range": 0,
+    "likert_non_integer": 0,
+    "collection_start": "2026-07-30 16:07:37.904000",
+    "collection_end": "2026-08-10 23:30:41.648000",
+    "collection_days": 12,
+    "peak_day": "2026-08-07",
+    "peak_day_n": 291
+  },
+  "response_style": {
+    "straight_lining_n": 2,
+    "straight_lining_pct": 0.2,
+    "low_within_row_sd_n": 2,
+    "mean_within_row_sd": 1.241,
+    "min_within_row_sd": 0.0,
+    "long_run_ge8_n": 7,
+    "long_run_ge8_pct": 0.71,
+    "acquiescence_pct_top_box": 37.6,
+    "pct_using_all_five_points": 28.4
+  },
+  "ceiling_items": [
+    "MissMeal",
+    "SleepLoss",
+    "LabStress",
+    "JobWorry"
+  ],
+  "sd_range": [
+    0.976,
+    1.459
+  ],
+  "measurement": {
+    "cronbach_alpha_12": 0.609,
+    "mean_interitem_r": 0.12,
+    "mean_abs_interitem_r": 0.123,
+    "max_interitem_r": 0.506,
+    "min_interitem_r": -0.053,
+    "bartlett": {
+      "chi2": 1330.6,
+      "dof": 66,
+      "p": 1.001831295330515e-234,
+      "determinant": 0.257652
+    },
+    "kmo": {
+      "overall": 0.669,
+      "per_item": {
+        "MissMeal": 0.736,
+        "PileUp": 0.73,
+        "SleepLoss": 0.767,
+        "LabStress": 0.769,
+        "ExamWorry": 0.648,
+        "ResultDemotiv": 0.656,
+        "CGPACompare": 0.686,
+        "AskTeacher": 0.547,
+        "Feedback": 0.534,
+        "Financial": 0.696,
+        "JobWorry": 0.71,
+        "SocioPol": 0.695
+      }
+    },
+    "n_weak_items": 3,
+    "verdict": "The twelve items do NOT form a single reliable scale (alpha = 0.61, KMO = 0.67, mean |inter-item r| = 0.12). They are a checklist of partly independent stressors. Consequence for this project: clustering the 12 raw items measures overall agreement level, i.e. SEVERITY, which is exactly how the earlier run collapsed to k = 2. The facets recovered in S7 are the fix, not a decoration."
+  },
+  "pca": {
+    "n_components_95pct": 11,
+    "n_eigenvalues_above_1": 4,
+    "pc1_pct": 20.32,
+    "pc1_pc2_pct": 33.15
+  },
+  "parallel_analysis": {
+    "n_retain_parallel": 4,
+    "n_sims": 500
+  },
+  "efa": {
+    "n_factors": 4,
+    "n_cross_loading_items": 0,
+    "ss_loadings": {
+      "F1": 1.152,
+      "F2": 1.132,
+      "F3": 1.02,
+      "F4": 0.982
+    },
+    "total_variance_explained_pct": 35.72
+  },
+  "subscale_spec_4": {
+    "Evaluation": [
+      "ExamWorry",
+      "ResultDemotiv",
+      "CGPACompare"
+    ],
+    "Workload": [
+      "MissMeal",
+      "PileUp",
+      "SleepLoss",
+      "LabStress"
+    ],
+    "FutureMacro": [
+      "Financial",
+      "JobWorry",
+      "SocioPol"
+    ],
+    "SupportGap": [
+      "AskTeacher",
+      "Feedback"
+    ]
+  },
+  "subscale_spec_5": {
+    "Evaluation": [
+      "ExamWorry",
+      "ResultDemotiv",
+      "CGPACompare"
+    ],
+    "Workload": [
+      "MissMeal",
+      "PileUp",
+      "SleepLoss",
+      "LabStress"
+    ],
+    "FutureMacro": [
+      "JobWorry",
+      "SocioPol"
+    ],
+    "SupportGap": [
+      "AskTeacher",
+      "Feedback"
+    ],
+    "Financial": [
+      "Financial"
+    ]
+  },
+  "split": {
+    "n_train": 690,
+    "n_holdout": 297,
+    "holdout_frac": 0.3
+  },
+  "n_model_fits": 245,
+  "excluded_runs": [
+    {
+      "space": "A_items12",
+      "algorithm": "complete",
+      "k": 2,
+      "reason": "degenerate: largest cluster holds 96.1% of n (> 80%)"
+    },
+    {
+      "space": "A_items12",
+      "algorithm": "complete",
+      "k": 3,
+      "reason": "degenerate: largest cluster holds 82.8% of n (> 80%)"
+    },
+    {
+      "space": "A_items12",
+      "algorithm": "complete",
+      "k": 4,
+      "reason": "degenerate: largest cluster holds 82.8% of n (> 80%)"
+    },
+    {
+      "space": "A_items12",
+      "algorithm": "average",
+      "k": 2,
+      "reason": "degenerate: largest cluster holds 98.8% of n (> 80%)"
+    },
+    {
+      "space": "A_items12",
+      "algorithm": "average",
+      "k": 3,
+      "reason": "degenerate: largest cluster holds 98.6% of n (> 80%)"
+    },
+    {
+      "space": "A_items12",
+      "algorithm": "average",
+      "k": 4,
+      "reason": "degenerate: largest cluster holds 98.4% of n (> 80%)"
+    },
+    {
+      "space": "A_items12",
+      "algorithm": "average",
+      "k": 5,
+      "reason": "degenerate: largest cluster holds 98.4% of n (> 80%)"
+    },
+    {
+      "space": "A_items12",
+      "algorithm": "average",
+      "k": 6,
+      "reason": "degenerate: largest cluster holds 98.1% of n (> 80%)"
+    },
+    {
+      "space": "A_items12",
+      "algorithm": "average",
+      "k": 7,
+      "reason": "degenerate: largest cluster holds 97.8% of n (> 80%)"
+    },
+    {
+      "space": "A_items12",
+      "algorithm": "average",
+      "k": 8,
+      "reason": "degenerate: largest cluster holds 97.0% of n (> 80%)"
+    },
+    {
+      "space": "B_subscales4",
+      "algorithm": "complete",
+      "k": 2,
+      "reason": "degenerate: largest cluster holds 96.2% of n (> 80%)"
+    },
+    {
+      "space": "B_subscales4",
+      "algorithm": "complete",
+      "k": 3,
+      "reason": "degenerate: largest cluster holds 83.2% of n (> 80%)"
+    },
+    {
+      "space": "B_subscales4",
+      "algorithm": "average",
+      "k": 2,
+      "reason": "degenerate: largest cluster holds 99.9% of n (> 80%)"
+    },
+    {
+      "space": "B_subscales4",
+      "algorithm": "average",
+      "k": 3,
+      "reason": "degenerate: largest cluster holds 99.6% of n (> 80%)"
+    },
+    {
+      "space": "B_subscales4",
+      "algorithm": "average",
+      "k": 4,
+      "reason": "degenerate: largest cluster holds 91.0% of n (> 80%)"
+    },
+    {
+      "space": "B_subscales4",
+      "algorithm": "average",
+      "k": 5,
+      "reason": "degenerate: largest cluster holds 91.0% of n (> 80%)"
+    },
+    {
+      "space": "B_subscales4",
+      "algorithm": "average",
+      "k": 6,
+      "reason": "degenerate: largest cluster holds 89.0% of n (> 80%)"
+    },
+    {
+      "space": "B_subscales4",
+      "algorithm": "average",
+      "k": 7,
+      "reason": "degenerate: largest cluster holds 86.8% of n (> 80%)"
+    },
+    {
+      "space": "B_subscales4",
+      "algorithm": "average",
+      "k": 8,
+      "reason": "degenerate: largest cluster holds 86.8% of n (> 80%)"
+    },
+    {
+      "space": "B5_subscales5",
+      "algorithm": "complete",
+      "k": 2,
+      "reason": "degenerate: largest cluster holds 97.1% of n (> 80%)"
+    },
+    {
+      "space": "B5_subscales5",
+      "algorithm": "average",
+      "k": 2,
+      "reason": "degenerate: largest cluster holds 99.9% of n (> 80%)"
+    },
+    {
+      "space": "B5_subscales5",
+      "algorithm": "average",
+      "k": 3,
+      "reason": "degenerate: largest cluster holds 99.1% of n (> 80%)"
+    },
+    {
+      "space": "B5_subscales5",
+      "algorithm": "average",
+      "k": 4,
+      "reason": "degenerate: largest cluster holds 98.4% of n (> 80%)"
+    },
+    {
+      "space": "B5_subscales5",
+      "algorithm": "average",
+      "k": 5,
+      "reason": "degenerate: largest cluster holds 93.5% of n (> 80%)"
+    },
+    {
+      "space": "B5_subscales5",
+      "algorithm": "average",
+      "k": 6,
+      "reason": "degenerate: largest cluster holds 92.0% of n (> 80%)"
+    },
+    {
+      "space": "B5_subscales5",
+      "algorithm": "average",
+      "k": 7,
+      "reason": "degenerate: largest cluster holds 92.0% of n (> 80%)"
+    },
+    {
+      "space": "B5_subscales5",
+      "algorithm": "average",
+      "k": 8,
+      "reason": "degenerate: largest cluster holds 89.7% of n (> 80%)"
+    },
+    {
+      "space": "C_subscales4_cgpa",
+      "algorithm": "complete",
+      "k": 2,
+      "reason": "degenerate: largest cluster holds 88.4% of n (> 80%)"
+    },
+    {
+      "space": "C_subscales4_cgpa",
+      "algorithm": "complete",
+      "k": 3,
+      "reason": "degenerate: largest cluster holds 88.4% of n (> 80%)"
+    },
+    {
+      "space": "C_subscales4_cgpa",
+      "algorithm": "average",
+      "k": 2,
+      "reason": "degenerate: largest cluster holds 99.9% of n (> 80%)"
+    },
+    {
+      "space": "C_subscales4_cgpa",
+      "algorithm": "average",
+      "k": 3,
+      "reason": "degenerate: largest cluster holds 99.4% of n (> 80%)"
+    },
+    {
+      "space": "C_subscales4_cgpa",
+      "algorithm": "average",
+      "k": 4,
+      "reason": "degenerate: largest cluster holds 93.8% of n (> 80%)"
+    },
+    {
+      "space": "C_subscales4_cgpa",
+      "algorithm": "average",
+      "k": 5,
+      "reason": "degenerate: largest cluster holds 92.0% of n (> 80%)"
+    },
+    {
+      "space": "C_subscales4_cgpa",
+      "algorithm": "average",
+      "k": 6,
+      "reason": "degenerate: largest cluster holds 92.0% of n (> 80%)"
+    },
+    {
+      "space": "C_subscales4_cgpa",
+      "algorithm": "average",
+      "k": 7,
+      "reason": "degenerate: largest cluster holds 87.5% of n (> 80%)"
+    },
+    {
+      "space": "C_subscales4_cgpa",
+      "algorithm": "average",
+      "k": 8,
+      "reason": "degenerate: largest cluster holds 87.5% of n (> 80%)"
+    },
+    {
+      "space": "C5_subscales5_cgpa",
+      "algorithm": "complete",
+      "k": 2,
+      "reason": "degenerate: largest cluster holds 98.4% of n (> 80%)"
+    },
+    {
+      "space": "C5_subscales5_cgpa",
+      "algorithm": "complete",
+      "k": 3,
+      "reason": "degenerate: largest cluster holds 83.2% of n (> 80%)"
+    },
+    {
+      "space": "C5_subscales5_cgpa",
+      "algorithm": "average",
+      "k": 2,
+      "reason": "degenerate: largest cluster holds 99.4% of n (> 80%)"
+    },
+    {
+      "space": "C5_subscales5_cgpa",
+      "algorithm": "average",
+      "k": 3,
+      "reason": "degenerate: largest cluster holds 99.4% of n (> 80%)"
+    },
+    {
+      "space": "C5_subscales5_cgpa",
+      "algorithm": "average",
+      "k": 4,
+      "reason": "degenerate: largest cluster holds 99.1% of n (> 80%)"
+    },
+    {
+      "space": "C5_subscales5_cgpa",
+      "algorithm": "average",
+      "k": 5,
+      "reason": "degenerate: largest cluster holds 99.0% of n (> 80%)"
+    },
+    {
+      "space": "C5_subscales5_cgpa",
+      "algorithm": "average",
+      "k": 6,
+      "reason": "degenerate: largest cluster holds 98.8% of n (> 80%)"
+    },
+    {
+      "space": "C5_subscales5_cgpa",
+      "algorithm": "average",
+      "k": 7,
+      "reason": "degenerate: largest cluster holds 97.0% of n (> 80%)"
+    },
+    {
+      "space": "C5_subscales5_cgpa",
+      "algorithm": "average",
+      "k": 8,
+      "reason": "degenerate: largest cluster holds 97.0% of n (> 80%)"
+    }
+  ],
+  "baseline_A_best_k_silhouette": 2,
+  "primary_space": "C5_subscales5_cgpa",
+  "primary_space_choice": {
+    "C_subscales4_cgpa": {
+      "crowned_k": 5.0,
+      "bootstrap_ari_at_k": 0.7432,
+      "differentiation_at_k": 0.669,
+      "silhouette_at_k": 0.1657,
+      "min_size_frac_at_k": 0.1667,
+      "n_survivors": 4.0
+    },
+    "C5_subscales5_cgpa": {
+      "crowned_k": 3.0,
+      "bootstrap_ari_at_k": 0.8114,
+      "differentiation_at_k": 0.5992,
+      "silhouette_at_k": 0.139,
+      "min_size_frac_at_k": 0.2478,
+      "n_survivors": 3.0
+    }
+  },
+  "gap": {
+    "ks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "gap": [
+      1.3458253945607375,
+      1.3393355293652682,
+      1.320000986838588,
+      1.311313028436718,
+      1.312535262217665,
+      1.3129948900305628,
+      1.3265483414266894,
+      1.3300366713130103
+    ],
+    "s_k": [
+      0.012470041651618097,
+      0.0134954862532577,
+      0.014258009771477724,
+      0.014641749117710556,
+      0.013432983986697275,
+      0.011866079799138552,
+      0.01454324764379957,
+      0.01597761924501323
+    ],
+    "k_selected": 1,
+    "n_references": 50,
+    "supports_no_structure": true,
+    "interpretation": "the gap statistic selects k = 1: the data is better described as one homogeneous group than as any partition tested"
+  },
+  "k_decision": {
+    "k_chosen": 3,
+    "note": "chosen by mean rank across 7 criteria among survivors",
+    "elbow_k": 4,
+    "gap_k": 1,
+    "silhouette_k": 2,
+    "davies_bouldin_k": 8,
+    "calinski_harabasz_k": 2,
+    "bic_k": 8,
+    "differentiation_k": 8,
+    "bootstrap_ari_k": 2,
+    "weak_structure": true,
+    "framing": "a defensible segmentation of a continuum",
+    "survivors": [
+      3,
+      4,
+      6
+    ]
+  },
+  "seed_stability": {
+    "n_seeds": 20,
+    "pairwise_ari_mean": 0.9325081426117978,
+    "pairwise_ari_min": 0.8415252663058269,
+    "pct_identical": 7.894736842105263
+  },
+  "cross_algorithm_ari_mean": 0.3392281457589384,
+  "consensus_by_cluster": {
+    "0": 0.902,
+    "1": 0.873,
+    "2": 0.849
+  },
+  "holdout": {
+    "max_centroid_drift": 0.2599883830811115,
+    "mean_centroid_drift": 0.11557974635418519,
+    "proportion_chi2": 1.5107293133785054,
+    "proportion_p": 0.46983925346177213,
+    "silhouette_train": 0.1389824557100642,
+    "silhouette_holdout": 0.12096317682158858,
+    "ari_frozen_vs_fresh": 0.377048441550766,
+    "passes_centroid_tolerance": true,
+    "passes_proportion": true
+  },
+  "profiles": {
+    "C0": {
+      "n": 361,
+      "pct": 36.6,
+      "Evaluation": 0.26096131330535716,
+      "Workload": 0.45804240474327973,
+      "FutureMacro": 0.1736983478664656,
+      "SupportGap": 0.46747284195252564,
+      "Financial": 0.6683928912624355,
+      "CGPA_ord": -0.6973132802251505
+    },
+    "C1": {
+      "n": 376,
+      "pct": 38.1,
+      "Evaluation": 0.17837400764482325,
+      "Workload": 0.11607452220156682,
+      "FutureMacro": 0.45779125542552723,
+      "SupportGap": -0.38104420621072665,
+      "Financial": -0.12409803249604934,
+      "CGPA_ord": 0.6826026642280106
+    },
+    "C2": {
+      "n": 250,
+      "pct": 25.3,
+      "Evaluation": -0.6451026439107498,
+      "Workload": -0.8359893138404529,
+      "FutureMacro": -0.9393384624791705,
+      "SupportGap": -0.1019402976385119,
+      "Financial": -0.7785158941088959,
+      "CGPA_ord": -0.019714030353812247
+    }
+  },
+  "eta_squared": {
+    "CGPA_ord": 0.3554,
+    "Financial": 0.3228,
+    "FutureMacro": 0.3144,
+    "Workload": 0.2589,
+    "Evaluation": 0.1424,
+    "SupportGap": 0.1379
+  },
+  "persona_names": [
+    "Low-CGPA & Financially strained & Unsupported",
+    "High-achieving & Future-anxious & Well-supported",
+    "Future-confident & Light workload & Financially secure"
+  ],
+  "runner_up": {
+    "k": 4,
+    "names": [
+      "Unsupported & Overloaded & Financially strained",
+      "Low-CGPA & Financially strained & Exam-anxious",
+      "Well-supported & High-achieving & Future-anxious",
+      "Future-confident & Financially secure & Light workload"
+    ],
+    "mean_rank": 2.0,
+    "headline_mean_rank": 1.8571428571428572,
+    "margin": 0.1428571428571428,
+    "bootstrap_ari": 0.5843031772487918,
+    "differentiation": 0.681221138438113,
+    "silhouette": 0.13380813006136888
+  },
+  "external_validation": {
+    "year": {
+      "levels": 5,
+      "chi2": 29.42,
+      "dof": 8,
+      "p": 0.00026713676772479645,
+      "cramers_v": 0.104,
+      "effect": "small",
+      "adjusted_rand": 0.0117,
+      "significant_bonferroni": true
+    },
+    "gender": {
+      "levels": 2,
+      "chi2": 12.42,
+      "dof": 2,
+      "p": 0.002008423482047328,
+      "cramers_v": 0.103,
+      "effect": "small",
+      "adjusted_rand": 0.0046,
+      "significant_bonferroni": true
+    },
+    "living": {
+      "levels": 4,
+      "chi2": 27.99,
+      "dof": 6,
+      "p": 9.425176173061969e-05,
+      "cramers_v": 0.106,
+      "effect": "small",
+      "adjusted_rand": 0.011,
+      "significant_bonferroni": true
+    },
+    "department": {
+      "levels": 14,
+      "chi2": 39.29,
+      "dof": 26,
+      "p": 0.04574096176339694,
+      "cramers_v": 0.082,
+      "effect": "negligible",
+      "adjusted_rand": 0.0011,
+      "significant_bonferroni": false
+    },
+    "backlog": {
+      "levels": 2,
+      "chi2": 36.68,
+      "dof": 2,
+      "p": 1.081666789805675e-08,
+      "cramers_v": 0.188,
+      "effect": "small",
+      "adjusted_rand": 0.0055,
+      "significant_bonferroni": true
+    },
+    "cgpa (IN MODEL - not validation)": {
+      "levels": 5,
+      "chi2": 385.14,
+      "dof": 8,
+      "p": 2.82551910984805e-78,
+      "cramers_v": 0.438,
+      "effect": "manipulation check",
+      "adjusted_rand": 0.1437,
+      "significant_bonferroni": true
+    }
+  },
+  "lexicon": {
+    "version": "1.0",
+    "n_themes": 13,
+    "fingerprint": "e5d41372b36412ba"
+  },
+  "text_profile": {
+    "Q18": {
+      "n_answered": 856,
+      "response_rate_pct": 86.7,
+      "words_mean": 10.7,
+      "words_median": 5.0,
+      "words_max": 357,
+      "chars_mean": 63.5,
+      "pct_le2_words": 28.0,
+      "pct_ge10_words": 31.9,
+      "lang_latin_pct": 88.1,
+      "lang_bangla_pct": 9.3,
+      "lang_mixed_pct": 2.6,
+      "romanised_n": 63,
+      "romanised_pct": 7.4,
+      "distinct_answers": 802
+    },
+    "Q19": {
+      "n_answered": 708,
+      "response_rate_pct": 71.7,
+      "words_mean": 8.3,
+      "words_median": 4.0,
+      "words_max": 234,
+      "chars_mean": 49.7,
+      "pct_le2_words": 31.9,
+      "pct_ge10_words": 24.4,
+      "lang_latin_pct": 88.7,
+      "lang_bangla_pct": 9.9,
+      "lang_mixed_pct": 1.4,
+      "romanised_n": 52,
+      "romanised_pct": 7.3,
+      "distinct_answers": 644
+    }
+  },
+  "text_coverage": {
+    "Q18": {
+      "coverage_pct": 85.7,
+      "mean_themes_per_answer": 1.4,
+      "pct_multi_theme": 35.5,
+      "n_uncovered": 122
+    },
+    "Q19": {
+      "coverage_pct": 71.9,
+      "mean_themes_per_answer": 1.14,
+      "pct_multi_theme": 27.1,
+      "n_uncovered": 199
+    }
+  },
+  "nonanswers": {
+    "Q18": 2,
+    "Q19": 20
+  },
+  "themes_significant": 0,
+  "unasked_stressors": {
+    "Cannot follow lectures": 1.6,
+    "Viva / oral examination": 1.4,
+    "Non-departmental courses": 1.4,
+    "Session jam / semester length": 1.3,
+    "Adjusting to a new city": 1.3,
+    "Preparatory leave too short": 1.2,
+    "Homesickness / family separation": 0.9,
+    "Hall / mess food quality": 0.7,
+    "Campus politics / ragging": 0.7,
+    "Cost of models / drawings": 0.5,
+    "Transport / commuting": 0.5,
+    "English-language weakness": 0.4
+  },
+  "tfidf_nmf": {
+    "n_documents": 856,
+    "vocabulary_size": 367,
+    "empty_vector_n": 130,
+    "empty_vector_pct": 15.2,
+    "empty_among_bangla_pct": 100.0,
+    "empty_among_latin_pct": 5.8
+  },
+  "q19_q18_pairs": 671,
+  "null_checks": {
+    "A_answered_n": 856,
+    "A_skipped_n": 131,
+    "A_strain_answered": 3.777,
+    "A_strain_skipped": 3.724,
+    "A_welch_t": 0.978,
+    "A_p": 0.329422162801569,
+    "A_cohens_d": 0.097,
+    "A_verdict": "skippers do NOT differ in measured strain (p = 0.329)",
+    "B_length_strain_r": 0.013,
+    "B_p": 0.7009651574132065,
+    "B_verdict": "answer length is unrelated to strain (r = 0.013, p = 0.701)"
+  },
+  "tree": {
+    "cv_folds": 10,
+    "cv_accuracy_mean": 0.7680478251906824,
+    "cv_accuracy_sd": 0.04122789630381579,
+    "train_accuracy": 0.7973657548125633,
+    "max_depth": 4,
+    "n_leaves": 16
+  },
+  "permutation_importance": {
+    "CGPA_ord": 0.2746,
+    "Financial": 0.1895,
+    "FutureMacro": 0.1697,
+    "Workload": 0.129,
+    "SupportGap": 0.0829,
+    "Evaluation": 0.0613
+  },
+  "recommendations": {
+    "Low-CGPA & Financially strained & Unsupported": "early-warning academic support and backlog recovery planning",
+    "High-achieving & Future-anxious & Well-supported": "early career counselling, internship pipeline, alumni contact",
+    "Future-confident & Light workload & Financially secure": "below the sample mean on every defining dimension: no targeted intervention indicated, use as the comparison group when evaluating any of the above"
+  },
+  "runtime_seconds": 500.7,
+  "n_figures": 30,
+  "limitations": [
+    "Structure is genuinely weak: silhouette ~0.14. These are a defensible, stable, interpretable segmentation of a continuum, not 3 naturally separated populations.",
+    "Subscale reliabilities are modest (short facets on heterogeneous topics); reported, not hidden.",
+    "The subscales come from an EFA on the same data used to cluster; the 70/30 holdout partially mitigates this, but no independent confirmatory sample exists.",
+    "CGPA is self-reported and banded, and including it in the primary model costs it as a validation variable.",
+    "Sample imbalance: 79% male, 64% in years 1-2, 14 departments; personas describe the dominant strata best.",
+    "The lexicon is single-coded: no second coder, so no inter-rater reliability figure and theme prevalences are lower bounds.",
+    "The free text is never a clustering input, which is what makes theme-cluster agreement genuine corroboration - but it means this project cannot say whether the text alone would reproduce the same personas.",
+    "Self-report, cross-sectional, single-site: no causal claim is available."
+  ]
+}

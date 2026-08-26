@@ -1,0 +1,13 @@
+﻿,label,corrected_item_total_r,alpha_if_deleted,weak_item
+MissMeal,Miss meals because of classes,0.308,0.579,False
+PileUp,Assignments / lab reports pile up,0.335,0.573,False
+SleepLoss,Sacrifice sleep for coursework,0.355,0.574,False
+LabStress,Lab work more stressful than theory,0.206,0.599,False
+ExamWorry,Worry about results despite preparing,0.376,0.565,False
+ResultDemotiv,One poor result kills motivation,0.371,0.566,False
+CGPACompare,Constantly compare CGPA with peers,0.164,0.613,True
+AskTeacher,Uncomfortable asking teachers for help (R),0.224,0.595,False
+Feedback,Instructor feedback does not reduce stress (R),0.188,0.603,True
+Financial,Financial concerns hurt performance,0.263,0.589,False
+JobWorry,Worry about a job after graduation,0.316,0.58,False
+SocioPol,Socio-economic / political instability,0.1,0.619,True
