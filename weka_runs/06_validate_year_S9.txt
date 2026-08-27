@@ -1,0 +1,75 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.SimpleKMeans -init 1 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 3 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 9
+Relation:     kuet_validate_year-weka.filters.unsupervised.attribute.Standardize
+Instances:    987
+Attributes:   7
+              Evaluation
+              Workload
+              FutureMacro
+              SupportGap
+              Financial
+              CGPA_ord
+Ignored:
+              year
+Test mode:    Classes to clusters evaluation on training data
+
+=== Clustering model (full training set) ===
+
+
+kMeans
+======
+
+Number of iterations: 23
+Within cluster sum of squared errors: 256.69654124121575
+
+Initial starting points (k-means++):
+
+Cluster 0: -0.384606,-0.453422,-2.474928,-2.160483,1.201979,0.397337
+Cluster 1: -0.384606,0.562916,-0.063522,-0.19242,-0.220507,-0.559179
+Cluster 2: 0.665924,-0.114643,1.14218,-1.176451,-0.93175,1.353853
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                           Cluster#
+Attribute      Full Data          0          1          2
+                 (987.0)    (330.0)    (318.0)    (339.0)
+=========================================================
+Evaluation             0     0.0413     0.2578     -0.282
+Workload               0    -0.0376     0.3594    -0.3005
+FutureMacro           -0     0.2215     0.1526    -0.3587
+SupportGap            -0    -0.3997     0.5208    -0.0995
+Financial             -0     0.4304     0.7815     -1.152
+CGPA_ord               0     0.7017    -0.7547     0.0249
+
+
+
+
+Time taken to build model (full training data) : 0.01 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0      330 ( 33%)
+1      318 ( 32%)
+2      339 ( 34%)
+
+
+Class attribute: year
+Classes to Clusters:
+
+   0   1   2  <-- assigned to cluster
+ 134  72 116 | 1st Year
+  99 105 102 | 2nd Year
+  34  60  53 | 3rd Year
+  63  80  67 | 4th Year
+   0   1   1 | Other
+
+Cluster 0 <-- 1st Year
+Cluster 1 <-- 4th Year
+Cluster 2 <-- 2nd Year
+
+Incorrectly clustered instances :	671.0	 67.9838 %
+

@@ -27,6 +27,10 @@ appendix.
 | `CGPA_ord` | NUMERIC | CGPA band as an ordinal, 1 = *Below 2.50* … 5 = *3.80–4.00* |
 | `cluster` | NOMINAL | The persona assigned by the notebook — **the label, not an input** |
 
+A **second file, `outputs/stress_validation.arff`**, carries the same rows plus the five
+held-out background variables (`year`, `gender`, `living`, `department`, `backlog`). It exists
+only to make §4.1 possible; never cluster on those columns.
+
 Three things to note before you start.
 
 1. **The subscale columns depend on which feature space the notebook crowned.** §11 chooses
@@ -173,11 +177,39 @@ WEKA prints the confusion matrix and the percentage of incorrectly clustered ins
 number answers "does WEKA's k-means recover the notebook's partition?" and is the right thing
 to quote when comparing the two tools.
 
-For the *genuine* external validation — against year, gender, living arrangement, department
-and backlog — those variables are deliberately **not in the ARFF**, because they were held out
-of every feature space. Notebook §18 does that analysis with Cramér's V effect sizes, which
-WEKA's classes-to-clusters output does not report. Use the notebook's Table 11 for it; at
-n = 987 a raw agreement percentage is easy to over-read.
+### 4.1 Genuine external validation — use the second ARFF
+
+`stress_prepared.arff` holds only the six clustering dimensions, so the *held-out* variables
+are not in it. **`outputs/stress_validation.arff` is the same 987 students with `year`,
+`gender`, `living`, `department` and `backlog` added back as nominal attributes**, purely so
+this step is demonstrable in WEKA. Those five never entered any feature space, which is what
+makes them valid external checks.
+
+> ⚠️ **Do not use this file for the validation run.** Everything not ignored and not the
+> class is a clustering input — and WEKA **auto-ignores the class attribute and resets your
+> manual ignore selection whenever you change the class**. That silently puts `cluster` back in
+> as a feature, and the run then reproduces the notebook's partition perfectly and meaninglessly.
+
+Use the **per-variable files** instead. Each holds the six clustering dimensions plus exactly
+one held-out nominal:
+
+| File | Class attribute | Ignore |
+|---|---|---|
+| `outputs/validate_backlog.arff` (strongest, V = 0.188) | `backlog` | — nothing |
+| `outputs/validate_gender.arff` | `gender` | — nothing |
+| `outputs/validate_year.arff` | `year` | — nothing |
+| `outputs/validate_living.arff` | `living` | — nothing |
+| `outputs/validate_department.arff` | `department` | — nothing |
+
+The single nominal *is* the class, WEKA excludes it automatically, and there is nothing left to
+ignore — so the reset cannot introduce a leak. Apply `Standardize`, then
+`SimpleKMeans -N 3 -init 1 -S 42`, **Classes to clusters evaluation**, and Start.
+
+**Read the output the right way.** WEKA reports "incorrectly clustered instances" as a raw
+percentage, which on this data will look alarmingly high and mean very little — the personas
+genuinely are *not* backlog or gender in disguise, and that is a finding, not a failure.
+Notebook §18 quantifies it properly with Cramér's V (all ≤ 0.19) and adjusted Rand (all ≈ 0).
+Quote Table 11 for the numbers and use WEKA's confusion matrix as the visual.
 
 ---
 
@@ -249,3 +281,98 @@ to be cited from the notebook rather than recreated: the profile differentiation
 the bootstrap-ARI stability screen (§13), Horn's parallel analysis (§7), the code-mixed
 free-text lexicon (§19), and the generated persona names (§17). Those are the parts that turn
 a partition into personas, and they only exist on the Python side.
+
+---
+
+## 8. J48 — turning the personas into readable rules
+
+The methodology report on file names **J48** explicitly, and notebook §20 is described as "the
+J48 equivalent". This is the one step where WEKA is arguably the better demo: it draws the tree
+for you.
+
+Load `stress_prepared.arff` (the label stays in), then:
+
+*Classify* tab → **Choose** → `trees/J48` → set **(Nom) cluster** as the class →
+**Cross-validation, Folds = 10** → **Start**.
+
+```
+weka.classifiers.trees.J48 -C 0.25 -M 20
+```
+
+`-M 20` sets the minimum instances per leaf. Raise it until the tree fits on a slide — at the
+default `-M 2` you get a sprawling tree that classifies well and explains nothing, which
+defeats the purpose. Notebook §20 caps depth at 4 and gets **76.8% ± 4.1%** under 10-fold CV
+with 16 leaves; expect J48 to land in the same neighbourhood.
+
+Right-click the result in the *Result list* → **Visualize tree**. That drawn tree, with one
+readable path per persona, is the single most convincing artefact you can put on a slide.
+
+> **Say what this is.** The tree is trained on labels the clustering produced, so its accuracy
+> measures *how cleanly the personas can be described*, not how well anything predicts stress.
+> It is interpretability, not prediction. Claiming 77% "accuracy at predicting student stress"
+> would be wrong, and it is the mistake a marker is most likely to probe.
+
+---
+
+## 9. A 12-minute live demonstration runbook
+
+> **These runs are done.** The completed set, with every number and the exact settings, is in
+> [`weka_runs/README.md`](../weka_runs/README.md). Six clean runs: k-means (ARI 0.459), EM
+> independently selecting **k = 3**, Ward (ARI 0.215), J48 (80.5% CV, κ 0.703), backlog
+> validation (**V = 0.163** vs the notebook's 0.188) and year validation (ARI 0.0099, null).
+> Use this section to rehearse; quote the README for the figures.
+
+Ordered so each step motivates the next. Times are for a lab demo with narration.
+
+**Before you start:** WEKA is not installed on this machine — get 3.8.6 or newer from
+<https://waikato.github.io/weka-wiki/downloading_weka/>. Newer releases are the ones that
+behave on current JDKs; if the GUI misbehaves on the installed Java 25, use the bundled JRE
+that WEKA's Windows installer offers.
+
+| # | Time | Do this | Say this |
+|---|---|---|---|
+| **1** | 1 min | *Preprocess* → open `stress_prepared.arff`. Click each attribute. | "987 students, six dimensions. Five are stress facets recovered by factor analysis, one is the CGPA band as an ordinal. `cluster` is the notebook's answer — it is a label, not an input." |
+| **2** | 1 min | Apply `Standardize`. Show the before/after SD in the attribute panel. | "Item SDs ran 0.98 to 1.46. Un-standardised, the most dispersed facet would decide every centroid on its own." |
+| **3** | 2 min | *Cluster* → `SimpleKMeans -N 3 -init 1 -I 500 -S 42` → **Use training set** → Start. | "Same k, same seed, k-means++ init to match scikit-learn. Compare the centroid table to Table 09a — same shapes." |
+| **4** | 2 min | Re-run with **Classes to clusters evaluation**, class = `cluster`, ignoring `cluster` as an input. | "This asks whether WEKA independently recovers the notebook's partition. Compare by the confusion matrix, never by cluster number — numbering is arbitrary in both tools." |
+| **5** | 2 min | `EM -N -1 -X 10 -S 42`. | "EM picks k for itself by cross-validated log-likelihood. If it disagrees, that is the point — the notebook's own panel of eight criteria voted for 1, 2, 4 and 8. The disagreement is the result." |
+| **6** | 1 min | `HierarchicalClusterer -N 3 -L WARD -P` → right-click → **Visualize tree**. | "Ward's dendrogram. Note there is no clean gap to cut at — which is exactly why we report a segmentation of a continuum rather than discovered groups." |
+| **7** | 2 min | Open `stress_validation.arff`. Classes-to-clusters against `backlog` (§4.1 ignore list). | "Backlog was never a model input. The personas track it — 12.2% vs 1.3% — but Cramér's V is only 0.19, so they are not backlog in disguise." |
+| **8** | 1 min | *Classify* → `J48 -M 20`, class = `cluster`, 10-fold → **Visualize tree**. | "And here is each persona as a readable rule. This describes the clusters; it does not predict stress." |
+
+**Have these open in another window** for the moments WEKA cannot cover: `fig13_gap_statistic.png`
+(the gap statistic votes k = 1), `fig18_persona_profiles.png` (the z-profile heatmap) and
+`fig27_unasked_stressors.png` (the twelve stressors the survey never asked about).
+
+### 9.1 The questions you will be asked
+
+| Question | Answer |
+|---|---|
+| "Why is the silhouette only 0.139?" | Structurally low on 5-point Likert data; published latent-profile work sits at 0.15–0.25. We report it rather than hiding it, and we label the output a segmentation of a continuum. |
+| "Why not k = 2? It scores better." | It does — on silhouette. It fails a pre-registered screen: only 40.7% of its between-cluster variation is *shape*, so it is a severity split, not a persona set. The rule was fixed before the run. |
+| "Isn't CGPA doing all the work?" | Partly, by design — η² = 0.355, the highest of any dimension. The proposal's personas combine achievement with a stressor pattern, so achievement had to be in the model. The cost is that CGPA can no longer serve as external validation, which is why five other variables were held out. |
+| "Why doesn't WEKA give identical clusters?" | Initialisation, restart count and empty-cluster handling differ (§7). WEKA corroborates the partition; it does not re-derive it. |
+| "Where is the text analysis?" | Not in WEKA — §12% of answers are Bangla script and would vectorise to nothing. Notebook §19, and `fig27`. |
+
+### 9.2 Check every clustering run before you quote it
+
+Three runs in the first pass silently fed the `cluster` label back in as a clustering feature and
+produced a perfect, meaningless partition — Ward returned sizes identical to the notebook's. A
+fourth ran a good configuration on a poor local optimum and destroyed the backlog association.
+
+Four checks, ten seconds:
+
+1. `Ignored:` lists `cluster` — or the file has no `cluster` column at all
+2. `cluster` does **not** appear under `Attributes:` or as a centroid-table row
+3. `Test mode:` says **Classes to clusters evaluation**, not "evaluate on training data"
+4. For k-means on this data, `Within cluster sum of squared errors` is ~**256.7**, not ~263.2
+
+Check 4 is the one people skip. `-S 42` converges to WCSS 263.2, where `CGPA_ord` spans 0.22
+instead of 1.46 and the backlog signal flattens from 6.4× to 1.2×. `SimpleKMeans` runs one start
+per seed; sweep seeds and keep the lowest WCSS.
+
+### 9.3 What to say if something breaks
+
+Every WEKA step above is a *corroboration* of a result that already exists in `outputs/`. If the
+GUI fails on the day, the demo still stands on `results.json` and the 30 figures — open
+`PROJECT_ANALYSIS.md` §5 and walk the numbers instead.

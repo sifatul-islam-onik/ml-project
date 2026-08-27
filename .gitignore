@@ -1,2 +1,8 @@
 __pycache__/
 *.pyc
+
+# Raw survey responses. Contains per-respondent timestamps, demographics and the
+# students' free-text answers, so it is not redistributed with the repository.
+# outputs/stress_clean.csv is the same data in CSV form, written by the pipeline.
+Academic Stress among Bangladeshi Engineering Students (Responses).xlsx
+outputs/stress_clean.csv

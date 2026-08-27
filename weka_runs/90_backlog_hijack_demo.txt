@@ -1,0 +1,79 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.SimpleKMeans -init 1 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 3 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 42
+Relation:     kuet_stress_validation-weka.filters.unsupervised.attribute.Standardize
+Instances:    987
+Attributes:   12
+              Evaluation
+              Workload
+              FutureMacro
+              SupportGap
+              Financial
+              CGPA_ord
+              backlog
+Ignored:
+              year
+              gender
+              living
+              department
+              cluster
+Test mode:    Classes to clusters evaluation on training data
+
+=== Clustering model (full training set) ===
+
+
+kMeans
+======
+
+Number of iterations: 7
+Within cluster sum of squared errors: 285.43321700575086
+
+Initial starting points (k-means++):
+
+Cluster 0: 1.366627,-0.114643,-0.666374,1.283628,0.490736,-1.515695,Yes
+Cluster 1: -0.033729,-0.453422,-0.666374,-0.19242,0.490736,-1.515695,No
+Cluster 2: -0.384606,0.224137,-0.063522,-0.684435,-0.93175,1.353853,No
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                           Cluster#
+Attribute      Full Data          0          1          2
+                 (987.0)     (63.0)    (486.0)    (438.0)
+=========================================================
+Evaluation             0     0.0215     0.1158    -0.1316
+Workload               0     0.1489     0.2088    -0.2531
+FutureMacro           -0    -0.1305     0.1957    -0.1984
+SupportGap            -0     0.2918     0.1386    -0.1958
+Financial             -0     0.1182     0.8112    -0.9171
+CGPA_ord               0    -1.1665     -0.073     0.2488
+backlog               No        Yes         No         No
+
+
+
+
+Time taken to build model (full training data) : 0.01 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0       63 (  6%)
+1      486 ( 49%)
+2      438 ( 44%)
+
+
+Class attribute: cluster
+Classes to Clusters:
+
+   0   1   2  <-- assigned to cluster
+  44 288  29 | C0
+   5 156 215 | C1
+  14  42 194 | C2
+
+Cluster 0 <-- C2
+Cluster 1 <-- C0
+Cluster 2 <-- C1
+
+Incorrectly clustered instances :	470.0	 47.619  %
+

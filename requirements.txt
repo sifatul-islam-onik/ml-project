@@ -1,0 +1,14 @@
+# Verified working set (Python 3.10.11, Windows 11).
+# The pipeline pins no upper bounds; these are the versions the committed
+# outputs/ were produced with. Kaggle's base image satisfies all of them.
+numpy==2.2.4
+pandas==2.3.3
+scipy==1.15.3
+scikit-learn==1.7.2
+matplotlib==3.10.9
+joblib==1.5.3
+openpyxl==3.1.5
+
+# Only needed to build PROJECT_REPORT.docx (python tools/build_report_docx.py).
+# Not required by the analysis pipeline.
+python-docx==1.2.0
